@@ -1,17 +1,15 @@
 package biblioteca;
 
-import java.time.LocalDate;
-
 public class LibroReferencia extends Libro {
+    private String ubicacionSala;
 
-    public LibroReferencia(String titulo) {
-        super(titulo);
+    public LibroReferencia(String titulo, String autor, String ubicacionSala) {
+        super(titulo, autor);
+        this.ubicacionSala = ubicacionSala;
     }
 
     @Override
-    public void prestarA(String dni, LocalDate fechaDevolucion) {
-        // Como no se pueden prestar, ponemos que se prestan a SALA
-        this.prestadoA = "SALA";
-        this.fechaDevolucion = LocalDate.now();
+    public String getDetalles() {
+        return super.getDetalles() + " | SOLO CONSULTA en Sala: " + ubicacionSala;
     }
 }

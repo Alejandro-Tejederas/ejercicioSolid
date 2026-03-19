@@ -1,32 +1,15 @@
 package biblioteca;
 
-import java.time.LocalDate;
-
 public class Libro {
+    protected String titulo;
+    protected String autor;
 
-    protected final String titulo;
-    protected String prestadoA;
-    protected LocalDate fechaDevolucion;
-
-    public Libro(String titulo) {
+    public Libro(String titulo, String autor) {
         this.titulo = titulo;
+        this.autor = autor;
     }
 
-    public void prestarA(String dni, LocalDate fechaDevolucion) {
-        this.prestadoA = dni;
-        this.fechaDevolucion = fechaDevolucion;
-    }
-
-    public void devolver() {
-        this.prestadoA = null;
-        this.fechaDevolucion = null;
-    }
-
-    public boolean estaPrestado() {
-        return prestadoA != null;
-    }
-
-    public String getTitulo() {
-        return titulo;
+    public String getDetalles() {
+        return "Libro: " + titulo + " - Autor: " + autor;
     }
 }
