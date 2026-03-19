@@ -17,3 +17,12 @@
 ## 4) Propuesta y aplicación de la corrección
 **Describe la refactorización (qué extraes, qué conviertes en interfaz, qué separas, etc.):**
 -
+
+Problema: MatriculaService tiene varias responsabilidades: 
+          valida el DNI, 
+          calcula el precio final, 
+          gestiona los datos y los notifica.
+
+Solución: He creado una clase para validar el dni, 
+          el cálculo de cuotas y la notificación a clases independientes, 
+          dejando el servicio más limpio y de forma más facil de testear.
