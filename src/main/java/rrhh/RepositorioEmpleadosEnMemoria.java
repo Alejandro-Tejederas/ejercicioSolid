@@ -3,7 +3,7 @@ package rrhh;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RepositorioEmpleadosEnMemoria {
+public class RepositorioEmpleadosEnMemoria implements EmpleadoRepository {
 
     private final Map<String, Empleado> bd = new HashMap<>();
 
